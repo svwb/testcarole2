@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/quizVolley.css">
+    <title>Quiz - Volley</title>
+</head>
+
+<body>
+    
+    <div class="home custom">
+        <h1>Quiz sur le volley-ball</h1>
+        <p>Testez vos connaissances sur le volley-ball au travers d’un quiz de 5 questions.</p>
+        <img src="/quizVolley.jpg" alt="Image d'une balle de volley devant un filet.">
+        <button>Commencer</button>
+    </div>
+    
+
+    <div class="quiz custom">
+        <h2 class="numberQuestion"></h2>
+        <p class="textQuestion"></p>
+        <section class="propositions"></section>
+        <button class="btnNext">Suivant</button>
+    </div>
+
+    <div class="result custom">
+        <h2>Résultats</h2>
+        <section>
+            <p class="resultCorrect"></p>
+            <p class="resultWrong"></p>
+            <p class="noReponse"></p>
+            <p class="resultScore"></p>
+            <p class="resultPercentage"></p>
+        </section>   
+        <button class="btnEnd">Fin</button>
+    </div>
+
+    <script src="/quizVolleyArray.js"></script>
+    <script src="/quizVolley.js"></script>
+</body>
+</html>

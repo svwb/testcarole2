@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorLightPink: #f2e9eb;
+    --colorLightPinkTransparent: #f2e9ebec;
+    --colorPink: #dd8ea4;
+    --colorPinkTransparent: #dd8ea5da;
+    --colorYellow: #fedd89;
+    --colorBlack: #31383f;
+    --colorLightBlack: #435160;
+    --colorTransparent: #ffffffaa;
+}
+
+
+/* en javascript */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ==========================  HEADER  =========================== */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* ====================  barre de navigation  ===================== */
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 9999;
+}
+
+nav{
+    background-color: var(--colorLightPink);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 6vh;
+    margin-top: 10px;
+}
+
+nav ul{
+    /* background-color: ; */
+    top: 0;
+    height: 7vh;
+    display: flex;
+    /* justify-content: end; */
+    align-items: center;
+    /* padding: 0 50px 0 20px; */
+}
+
+nav ul li{
+    list-style: none;
+    padding: 16px;
+    /* margin: 0 10px; */
+}
+
+.linkHover:hover{
+    background-color: var(--colorPink);
+    background-color: var(--colorLightBlack);
+    background-color: var(--colorBlack);
+}
+
+.linkHover:hover a{
+    color: var(--colorLightPink);
+}
+
+nav ul li a{
+    color: var(--colorBlack);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ===========================  MAIN  ============================ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* parallax : image de fond pour la section "about" */ 
+#aboutBackgroundImage{
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+/* =======================  section home ========================= */
+#home{
+    height: 100vh;
+    letter-spacing: 1.2px;
+    color: var(--colorBlack);
+    background-color: var(--colorLightPink);
+}
+
+.text-home{
+    position: absolute;
+    top: 40%;
+    left: 17.5%;
+    animation: 1.2s ease-in-out forwards text-home;
+}
+
+@keyframes text-home{
+    0% {
+        transform: scale(.2) rotate(-30deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.text-home p{
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.text-home span{
+    font-size: .5rem;
+}
+
+#home img{
+    width: 500px;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: 2s ease-in-out forwards imgBigLogoCG;
+}
+
+@keyframes imgBigLogoCG{
+    0%{
+        opacity: 0;
+        /* transform: rotateY(360deg); */
+    }
+    100%{
+        opacity: 1;
+        /* transform: rotateY(0deg); */
+    }
+}
+
+.homeFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 7vh;
+    background-color: var(--colorLightPink);
+    color: #31383fb0;
+}
+
+/* =======================  section à propos ========================= */
+#about{
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2e9eb98;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-about{
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--colorBlack);
+    background-color: var(--colorYellow);
+    /* border: 3px solid var(--colorPink); */
+}
+
+/* .container-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.aboutColumn{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.aboutLeft{
+    padding: 0 70px 0 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutLeft h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.aboutLeft h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+.aboutLeft p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aboutRight{
+    padding-right: 70px;
+}
+
+.aboutRight img{
+    width: 200px;
+    border-radius: 10px;
+    /* animation: photoCarole 2s ease-in-out; */
+}
+
+/* @keyframes photoCarole {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+} */
+
+
+
+
+/* lien vers mon CV */
+#myCV{
+    position: relative;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 15vw;
+    margin-top: 30px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+
+#myCV:hover{
+    background-color: var(--colorPink);
+    color: var(--colorLightPink);  
+    font-weight: 600;
+    font-size: 1.2rem;
+} 
+
+
+
+/* =======================  section competence ========================= */
+#competence{
+    position: relative;
+    height: 100vh;
+    color: var(--colorLightPink);
+    background-color: var(--colorBlack);
+}
+
+.box-competence{
+    position: relative;
+    width: 60vw;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 3px solid green; */
+}
+
+#competence h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.container-competence{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--colorLightPink);
+    border-radius: 10px;
+    /* border: 3px solid white; */
+}
+
+
+.card-computer{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    /* border: 3px solid orange; */
+}
+
+.webDesign,
+.frontEnd,
+.BackEnd,
+.dataBase,
+.collaborative,
+.infrastructure{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    perspective: 1000px;
+    margin: 30px;
+    /* border: 3px solid red; */
+    /* border: 5px solid var(--colorPink); */
+}
+
+
+
+/* Centrage du texte dans les cartes comptétences */
+.centerTextCard{
+    position: relative;
+    text-align: center;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Effet de retournement des cartes compétences */
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--colorLightBlack);
+    font-size: 1.5rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* border: 5px solid var(--colorPink); */
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    background-color: var(--colorLightPink);
+    color: var(--colorBlack);
+    font-weight: 600;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.front,
+.back{
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.webDesign:hover .centerTextCard,
+.frontEnd:hover .centerTextCard,
+.BackEnd:hover .centerTextCard,
+.dataBase:hover .centerTextCard,
+.collaborative:hover .centerTextCard,
+.infrastructure:hover .centerTextCard{
+    transform: rotateY(180deg);
+    
+    
+}
+
+
+/* icones présentent sur les cartes*/
+.centerTextCard img{
+    padding-top: 25px;
+    width: 70px;
+    filter: brightness(0) invert(1);
+}
+
+
+
+
+
+/* =======================  section projets ========================= */
+#projects{
+    height: 100vh;
+    color: var(--colorBlack);
+    background-color: var(--colorLightPink);
+}
+
+.box-projects{
+    position: relative;
+    width: 60vw;
+    top: 50%;  /* A vérifier !!! */
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#projects h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.inner-projects{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    height: 500px;
+    border: 3px solid var(--colorLightBlack);
+    border-radius: 10px;
+}
+
+.inner-projects a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inner-projects h3{
+    transform: rotate(-45deg);
+    z-index: 1;
+    color: var(--colorBlack);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.inner-projects img{
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px -1px var(--colorLightBlack);
+    z-index: -1;
+}
+
+.inner-projects img:hover{
+    animation: img 1.5s ease-in-out infinite forwards;
+}
+
+@keyframes img{
+    0%{
+        box-shadow: 10px 10px 10px -1px var(--colorLightBlack);
+    }
+    50%{
+        /* box-shadow: 10px 10px 10px -1px var(--colorLightPink); */
+        box-shadow: 17.5px 17.5px 10px -1px var(--colorLightBlack);
+    }
+    100%{
+        box-shadow: 10px 10px 10px -1px var(--colorLightBlack);
+    }
+}
+
+/* =======================  section contact ========================= */
+#contact{
+    position: relative;
+    height: 100vh;
+    color: var(--colorLightPink);
+    background-color: var(--colorBlack);
+}
+
+.box-contact{
+    position: relative;
+    width: 60vw;
+    top: 50%;  /* A vérifier !!! */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 3px solid green; */
+}
+
+#contact h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.text-contact{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px 0 20px;
+}
+
+.text-contact span{
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+}
+
+form{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px 40px 0px;      /*  ????????  */
+    background-color: var(--colorLightBlack);
+    color: var(--colorLightPink);
+    font-weight: 600;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+.sections{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left,
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    padding-left: 40px;
+}
+
+.left{
+    padding-right: 20px;
+}
+
+.sections article{
+    padding: 15px 0;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+select,
+input,
+textarea{
+    outline: none;
+    border: none;
+    background-color: var(--colorLightPink);
+    color: var(--colorBlack);
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding:  10px 0 10px 10px;
+    border-radius: 5px;
+}
+
+select{
+    width: 11vw;
+    font-family: 'Poppins', sans-serif;
+    padding: 7px 0 7px 10px;
+}
+
+input{
+    width: 25vw;
+}
+
+textarea{
+    font-family: 'Poppins', sans-serif;
+    width: 25vw;
+    height: 75%;
+}
+
+#sendMessage{
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: 10vw;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+
+#sendMessage:hover{
+    background-color: var(--colorPink);
+    color: var(--colorLightPink);    
+} 
+
+option{
+    background-color: var(--colorLightBlack);
+    color: var(--colorLightPink);
+}
+
+
+
+.contactFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 7vh;
+    color: #f2e9eb98;
+    background-color: var(--colorBlack);
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ==========================  FOOTER  =========================== */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 7vh;
+    background-color: var(--colorLightPink);
+    color: #31383fb0;
+} */
